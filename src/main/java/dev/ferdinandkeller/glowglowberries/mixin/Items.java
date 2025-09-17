@@ -24,7 +24,7 @@ public class Items {
         ConsumableComponent GLOW_BERRIES = ConsumableComponents.food()
             .consumeEffect(
                 new ApplyEffectsConsumeEffect(
-                    new StatusEffectInstance(StatusEffects.GLOWING, 40, 1)
+                    new StatusEffectInstance(StatusEffects.GLOWING, 40)
                 )
             )
             .build();
