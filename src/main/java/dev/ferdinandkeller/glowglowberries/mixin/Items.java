@@ -2,9 +2,9 @@ package dev.ferdinandkeller.glowglowberries.mixin;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,7 +30,7 @@ public class Items {
 
         // create a custom Glow Berries food component
         FoodComponent GLOW_BERRIES = new FoodComponent.Builder()
-            .nutrition(2)
+            .hunger(2)
             .saturationModifier(0.1F)
             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 40), 1.0F)
             .build();
@@ -39,4 +39,3 @@ public class Items {
         settings.food(GLOW_BERRIES);
     }
 }
-
